@@ -43,13 +43,6 @@ public class jpaEntityMapping {
          *     )
          */
         try{
-            Member member = new Member();
-            member.setId(1L);
-            member.setName("A");
-            member.setRoleType(RoleType.ADMIN); // @Enumerated 가 ordinal 이면 0부터 enum 순서에 따라 int 형으로 db에 저장.
-
-            em.persist(member);
-
 
             em.getTransaction().commit();
         }catch (Exception e){
