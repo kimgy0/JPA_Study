@@ -27,7 +27,7 @@ public class JPQLMain {
             query2.setParameter("username", "member1");
 
             // JPQLMember singleResult = query.getSingleResult();
-            // 결과가 정확하게 하나만 나와야 합니다 - > 아니면 예외가 터져버립니다.
+            // 결과가 정확하게 하나만 나와야 합 니다 - > 아니면 예외가 터져버립니다.
 
             for (JPQLMember jpqlMember : resultList) { }
             Query query1 = em.createQuery("select m.username, m.age from JPQLMember m");
@@ -94,6 +94,7 @@ public class JPQLMain {
             //enum타입 같은경우에는 패키지명을 포함해서 다 적어준다.
             //추가로 type()이라는 쿼리함수를 쓸 때는 이렇게한다
             /* select i from Item i where type(i) = Book ,ITEM.CLASS*/
+            /* select i from item i where treat(i as book).author=kim */
 
             /****************************************************************/
             /****************************** 조건식 CASE 등 **************************/
